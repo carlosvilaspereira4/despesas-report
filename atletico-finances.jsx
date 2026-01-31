@@ -33,10 +33,10 @@ const AtleticoFinancesApp = () => {
 
   // Predefined users and categories
   const users = [
-    'João Silva', 'Maria Santos', 'Pedro Costa', 'Ana Rodrigues', 'Carlos Mendes',
-    'Sofia Alves', 'Miguel Ferreira', 'Beatriz Sousa', 'Ricardo Oliveira', 'Inês Martins',
-    'Tiago Pereira', 'Mariana Carvalho', 'André Gomes', 'Catarina Lopes', 'Bruno Dias',
-    'Joana Ribeiro', 'Nuno Pinto', 'Teresa Vieira', 'Rui Moreira', 'Francisca Duarte'
+    'Carlos Pereira', 'Nelson Martins', 'Paulo Fernandes', 'António Pereira', 'António Teixeira',
+    'Júlio Dinis', 'António Miguel', 'Luís Miguel', 'Ricardo Oliveira', 'Pedro Pereira',
+    'Marcelo Teixeira', 'Catarina Oliveira', 'Daniela Passos', 'Ana Glória', 'Margarida Ramos',
+    'Maria João', 'Cátia Mariana', 'Patrícia Valadares', 'Sara Correia', 'Diogo Andrade'
   ].sort();
 
   const categories = [
