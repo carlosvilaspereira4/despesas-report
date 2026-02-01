@@ -56,12 +56,12 @@ const AtleticoFinancesApp = () => {
 
   // Load data from storage
   useEffect(() => {
-    const loadData = async () => {
-      try {
-        const result = await localStorage.getItem('transactions');
-        if (result && result.value) {
-          setTransactions(JSON.parse(result.value));
-        }
+  const loadData = () => {
+    try {
+      const result = localStorage.getItem('transactions');
+      if (result) {  // ← SEM .value
+        setTransactions(JSON.parse(result));  // ← SEM .value
+      }
       } catch (error) {
         console.log('No previous transactions found');
       }
@@ -70,10 +70,10 @@ const AtleticoFinancesApp = () => {
   }, []);
 
   // Save transactions to storage
-  const saveTransactions = async (newTransactions) => {
-    try {
-      await localStorage.setItem('transactions', JSON.stringify(newTransactions));
-      setTransactions(newTransactions);
+  const saveTransactions = (newTransactions) => {  // ← SEM async
+  try {
+    localStorage.setItem('transactions', JSON.stringify(newTransactions));  // ← SEM await
+    setTransactions(newTransactions);
     } catch (error) {
       console.error('Error saving transactions:', error);
       alert('Erro ao guardar transação');
