@@ -58,7 +58,7 @@ const AtleticoFinancesApp = () => {
   useEffect(() => {
     const loadData = async () => {
       try {
-        const result = await window.storage.get('transactions');
+        const result = await localStorage.getItem('transactions');
         if (result && result.value) {
           setTransactions(JSON.parse(result.value));
         }
@@ -72,7 +72,7 @@ const AtleticoFinancesApp = () => {
   // Save transactions to storage
   const saveTransactions = async (newTransactions) => {
     try {
-      await window.storage.set('transactions', JSON.stringify(newTransactions));
+      await localStorage.setItem('transactions', JSON.stringify(newTransactions));
       setTransactions(newTransactions);
     } catch (error) {
       console.error('Error saving transactions:', error);
